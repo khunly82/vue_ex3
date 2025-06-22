@@ -1,0 +1,36 @@
+@import 'primeicons/primeicons.css';
+@import "tailwindcss";
+@import "tailwindcss-primeui";
+
+@layer base {
+    * {
+        box-sizing: border-box;
+    }
+    html {
+        font-size: 16px;
+    }
+    body {
+        margin: 0;
+    }
+    #app {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    table tr {
+        @apply border-b;
+        &:last-child {
+            @apply border-b-2
+        }
+        > th, td {
+            @apply p-1;
+        }
+    }
+}
+
+@layer components {
+    .panel {
+        @apply px-5 py-8 flex gap-3 flex-col;
+        box-shadow: 2px 2px 5px 0 #ccc;
+    }
+}
