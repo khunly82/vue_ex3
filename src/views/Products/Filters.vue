@@ -3,7 +3,7 @@ import { Button, FloatLabel, InputText, Select } from 'primevue';
 import { reactive } from 'vue';
 const form = reactive<{search?: string, category?: string}>({});
 defineEmits<{
-    (e: 'submit', response: { search: string, category: string }): void
+    (e: 'submit', response: { search?: string, category?: string }): void
 }>()
 </script>
 <template>
